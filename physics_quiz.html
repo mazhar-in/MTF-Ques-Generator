@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JEE Match the Following Questions</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.45/dist/katex.min.css" integrity="sha384-UA8juhPf75SzzAMA/4fo3yOU7sBJ0om7SCD2GHq0fZqZco6tr1UCV7nUbk9J90JM" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.45/dist/katex.min.js" integrity="sha384-Tt7wBxLKwSzFVRET4O4U9H6v8MNaQ/CjN2FMP4xFm0ErrFu6aNqoonRVW5W40iGI" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.45/dist/contrib/auto-render.min.js" integrity="sha384-bjyGPfbij8/NDKJhSGZNP/khQVgtHUE5exjm4Ydllo42FwIgYsdLO2lXGmRBf5Mz" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+
+    <style>
+        :root {
+            --bg: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+            --glass: rgba(255, 255, 255, 0.1);
+            --border: rgba(255, 255, 255, 0.1);
+            --text: #f8fafc;
+        }
+
+        @media (prefers-color-scheme: light) {
+            :root {
+                --bg: linear-gradient(135deg, #f8fafc 0%, #dbeafe 100%);
+                --glass: rgba(255, 255, 255, 0.7);
+                --border: rgba(0, 0, 0, 0.1);
+                --text: #0f172a;
+            }
+        }
+
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background: var(--bg);
+            background-attachment: fixed;
+            color: var(--text);
+            margin: 0;
+            padding: clamp(10px, 5vw, 40px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 1.25rem;
+        }
+
+        .container { width: 100%; max-width: 850px; }
+        h1 { font-size: 3rem; text-align: center; margin-bottom: 50px; font-weight: 800; letter-spacing: -0.05em; }
+
+        .glass-card {
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--border);
+            border-radius: 32px;
+            padding: clamp(20px, 5vw, 40px);
+            margin-bottom: 50px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+
+        table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 30px 0; border-radius: 20px; overflow: hidden; border: 1px solid var(--border); }
+        th, td { padding: 20px; text-align: left; border-bottom: 1px solid var(--border); font-size: 1.2rem; }
+        th { background: rgba(0,0,0,0.05); font-weight: 700; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 0.1em; }
+
+        .options-container { display: grid; gap: 15px; margin-top: 30px; }
+        .opt-btn {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid var(--border);
+            padding: 20px;
+            border-radius: 18px;
+            color: inherit;
+            cursor: pointer;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            font-size: 1.15rem;
+            text-align: left;
+        }
+        .opt-btn:hover:not(:disabled) { background: rgba(255,255,255,0.15); transform: translateY(-2px); }
+        .opt-btn.correct { background: #10b981 !important; border-color: #10b981; color: white !important; font-weight: bold; }
+        .opt-btn.wrong { background: #ef4444 !important; border-color: #ef4444; color: white !important; font-weight: bold; }
+
+        .feedback { font-weight: 700; margin-top: 25px; text-align: center; font-size: 1.4rem; min-height: 1.5em; }
+        
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            .glass-card { padding: 20px; }
+            th, td { padding: 12px; font-size: 1rem; }
+            .opt-btn { font-size: 1rem; padding: 15px; }
+        }
+    </style>
+
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Quiz", "name": "Physics Dimensional Analysis Quiz", "hasPart": [{"@type": "Question", "name": "Match Set 1"}, {"@type": "Question", "name": "Match Set 2"}, {"@type": "Question", "name": "Match Set 3"}, {"@type": "Question", "name": "Match Set 4"}, {"@type": "Question", "name": "Match Set 5"}, {"@type": "Question", "name": "Match Set 6"}, {"@type": "Question", "name": "Match Set 7"}, {"@type": "Question", "name": "Match Set 8"}, {"@type": "Question", "name": "Match Set 9"}, {"@type": "Question", "name": "Match Set 10"}, {"@type": "Question", "name": "Match Set 11"}, {"@type": "Question", "name": "Match Set 12"}, {"@type": "Question", "name": "Match Set 13"}, {"@type": "Question", "name": "Match Set 14"}, {"@type": "Question", "name": "Match Set 15"}, {"@type": "Question", "name": "Match Set 16"}, {"@type": "Question", "name": "Match Set 17"}, {"@type": "Question", "name": "Match Set 18"}, {"@type": "Question", "name": "Match Set 19"}, {"@type": "Question", "name": "Match Set 20"}]}</script>
+</head>
+<body>
+    <div class="container">
+        <h1>Dimensional Alanysis Match the following questions for JEE</h1>
+        <div id="quiz-root"></div>
+    </div>
+
+    <!-- RAW JSON to preserve backslashes -->
+    <script id="quiz-data" type="application/json">
+        [{"id": 1, "list_i": ["Illuminance", "Torque", "Gravitational constant", "Decay constant"], "list_ii": ["[M^-1 L^3 T^-2]", "[M^0 L^0 T^-1]", "[M L^2 T^-2]", "[M L^0 T^-3]"], "options": ["A-II, B-I, C-III, D-IV", "A-I, B-III, C-II, D-IV", "A-IV, B-III, C-I, D-II", "A-II, B-IV, C-III, D-I"], "answer": 3}, {"id": 2, "list_i": ["Resistance", "Pressure gradient", "Angular impulse", "Internal energy"], "list_ii": ["[M L^-2 T^-2]", "[M L^2 T^-3 A^-2]", "[M L^2 T^-2]", "[M L^2 T^-1]"], "options": ["A-I, B-II, C-IV, D-III", "A-II, B-I, C-IV, D-III", "A-III, B-II, C-I, D-IV", "A-I, B-II, C-IV, D-III"], "answer": 2}, {"id": 3, "list_i": ["Work", "Magnetic dipole moment", "Boltzmann constant", "Impulse"], "list_ii": ["[M L T^{-1}]", "[M L^2 T^{-2}]", "[M^0 L^2 T^0 A]", "[M L^2 T^-2 K^-1]"], "options": ["A-II, B-III, C-IV, D-I", "A-I, B-II, C-III, D-IV", "A-II, B-I, C-III, D-IV", "A-II, B-I, C-III, D-IV"], "answer": 1}, {"id": 4, "list_i": ["Viscosity", "Resistance", "Luminous efficiency", "Gravitational constant"], "list_ii": ["[M^0 L^0 T^0]", "[M^-1 L^3 T^-2]", "M L^-1 T^{-1}", "[M L^2 T^-3 A^-2]"], "options": ["A-III, B-IV, C-II, D-I", "A-II, B-III, C-I, D-IV", "A-III, B-IV, C-I, D-II", "A-II, B-IV, C-I, D-III"], "answer": 3}, {"id": 5, "list_i": ["Internal energy", "Mass defect", "Intensity of wave", "Current density"], "list_ii": ["[M L^0 T^0]", "[M^0 L^-2 T^0 A]", "[M L^2 T^-2]", "[M L^0 T^-3]"], "options": ["A-III, B-I, C-IV, D-II", "A-I, B-III, C-IV, D-II", "A-I, B-II, C-III, D-IV", "A-III, B-IV, C-II, D-I"], "answer": 1}, {"id": 6, "list_i": ["Mass density", "Faraday constant", "Electric flux", "Potential energy"], "list_ii": ["[M^0 L^0 T A mol^-1]", "[M L^{-3} T^0]", "[M L^2 T^-2]", "[M L^3 T^-3 A^-1]"], "options": ["A-II, B-I, C-IV, D-III", "A-I, B-II, C-III, D-IV", "A-II, B-IV, C-III, D-I", "A-I, B-IV, C-II, D-III"], "answer": 1}, {"id": 7, "list_i": ["Angular momentum", "Radius of gyration", "Efficiency", "Moment of couple"], "list_ii": ["[M^0 L^0 T^0]", "[M L^2 T^-2]", "[M L^2 T^-1]", "[M^0 L T^0]"], "options": ["A-IV, B-III, C-I, D-II", "A-III, B-IV, C-I, D-II", "A-IV, B-I, C-III, D-II", "A-IV, B-II, C-III, D-I"], "answer": 2}, {"id": 8, "list_i": ["Pressure gradient", "Mass density", "Surface energy", "Binding energy"], "list_ii": ["[M L^2 T^-2]", "[M L^-2 T^-2]", "[M L^{-3} T^0]", "[M L^0 T^-2]"], "options": ["A-I, B-III, C-II, D-IV", "A-II, B-I, C-IV, D-III", "A-II, B-III, C-IV, D-I", "A-III, B-IV, C-II, D-I"], "answer": 3}, {"id": 9, "list_i": ["Electric field", "Angular momentum", "Angular acceleration", "Illuminance"], "list_ii": ["[M^0 L^0 T^-2]", "[M L^0 T^-3]", "[M L^2 T^-1]", "[M L T^-3 A^-1]"], "options": ["A-II, B-III, C-IV, D-I", "A-IV, B-I, C-III, D-II", "A-IV, B-III, C-I, D-II", "A-I, B-IV, C-III, D-II"], "answer": 3}, {"id": 10, "list_i": ["Acceleration", "Resistance", "Inductive reactance", "Energy"], "list_ii": ["[M L^2 T^{-2}]", "[M L^2 T^-3 A^-2]", "M L^2 T^{-3} A^{-2}", "[M^0 L T^{-2}]"], "options": ["A-II, B-III, C-I, D-IV", "A-IV, B-III, C-I, D-II", "A-I, B-III, C-IV, D-II", "A-IV, B-III, C-II, D-I"], "answer": 4}, {"id": 11, "list_i": ["Radius of gyration", "Magnification", "Thermal expansion coefficient", "Coefficient of viscosity"], "list_ii": ["[M^0 L^0 T^0]", "[M^0 L T^0]", "[M L^-1 T^-1]", "[M^0 L^0 T^0 K^-1]"], "options": ["A-II, B-I, C-IV, D-III", "A-III, B-IV, C-II, D-I", "A-I, B-III, C-II, D-IV", "A-III, B-I, C-II, D-IV"], "answer": 1}, {"id": 12, "list_i": ["Velocity gradient", "Illumination", "Wavelength", "Pressure gradient"], "list_ii": ["[M^0 L T^0]", "[M L^-2 T^-2]", "[M L^0 T^-3]", "[M^0 L^0 T^-1]"], "options": ["A-I, B-II, C-III, D-IV", "A-IV, B-II, C-I, D-III", "A-IV, B-III, C-I, D-II", "A-IV, B-III, C-II, D-I"], "answer": 3}, {"id": 13, "list_i": ["Escape velocity", "Latent heat", "Angular momentum", "Speed"], "list_ii": ["[M^0 L^2 T^-2]", "[M^0 L T^-1]", "[M^0 L T^{-1}]", "[M L^2 T^-1]"], "options": ["A-II, B-I, C-IV, D-III", "A-I, B-II, C-IV, D-III", "A-I, B-III, C-II, D-IV", "A-II, B-I, C-III, D-IV"], "answer": 1}, {"id": 14, "list_i": ["Moment of couple", "Velocity", "Internal energy", "Planck's constant"], "list_ii": ["[M^0 L T^{-1}]", "[M L^2 T^-2]", "M L^2 T^{-1}", "[M L^2 T^-2]"], "options": ["A-II, B-I, C-II, D-III", "A-III, B-II, C-I, D-IV", "A-III, B-IV, C-I, D-II", "A-I, B-IV, C-III, D-II"], "answer": 1}, {"id": 15, "list_i": ["Refractive index", "Resistance", "Angular acceleration", "Volume"], "list_ii": ["[M^0 L^0 T^-2]", "[M^0 L^0 T^0]", "[M^0 L^3 T^0]", "M L^2 T^{-3} A^{-2}"], "options": ["A-I, B-II, C-III, D-IV", "A-III, B-I, C-II, D-IV", "A-III, B-IV, C-II, D-I", "A-II, B-IV, C-I, D-III"], "answer": 4}, {"id": 16, "list_i": ["Energy", "Wavelength", "Decay constant", "Centripetal acceleration"], "list_ii": ["[M^0 L^0 T^-1]", "[M^0 L T^-2]", "[M L^2 T^{-2}]", "[M^0 L T^0]"], "options": ["A-III, B-I, C-II, D-IV", "A-III, B-IV, C-I, D-II", "A-IV, B-II, C-III, D-I", "A-II, B-I, C-IV, D-III"], "answer": 2}, {"id": 17, "list_i": ["Acceleration", "Thermal expansion coefficient", "Volume", "Trigonometric ratio"], "list_ii": ["[M^0 L^0 T^0]", "[M^0 L^3 T^0]", "[M^0 L T^{-2}]", "[M^0 L^0 T^0 K^-1]"], "options": ["A-IV, B-I, C-II, D-III", "A-III, B-IV, C-II, D-I", "A-II, B-I, C-IV, D-III", "A-IV, B-II, C-I, D-III"], "answer": 2}, {"id": 18, "list_i": ["Centripetal acceleration", "Threshold frequency", "Magnetic field strength", "Luminous efficiency"], "list_ii": ["T^{-1}", "[M^0 L^0 T^0]", "[M^0 L T^-2]", "[M^0 L^-1 T^0 A]"], "options": ["A-I, B-II, C-III, D-IV", "A-IV, B-II, C-III, D-I", "A-III, B-I, C-IV, D-II", "A-IV, B-I, C-III, D-II"], "answer": 3}, {"id": 19, "list_i": ["Magnetic field strength", "Power", "Universal gas constant", "Wien constant"], "list_ii": ["[M^0 L T^0 K]", "[M L^2 T^-2 K^-1 mol^-1]", "[M L^2 T^{-3}]", "[M^0 L^-1 T^0 A]"], "options": ["A-IV, B-III, C-II, D-I", "A-II, B-I, C-IV, D-III", "A-II, B-I, C-III, D-IV", "A-I, B-IV, C-II, D-III"], "answer": 1}, {"id": 20, "list_i": ["Magnification", "Latent heat", "Electric flux", "Entropy"], "list_ii": ["[M L^2 T^-2 K^-1]", "[M L^3 T^-3 A^-1]", "[M^0 L^2 T^-2]", "[M^0 L^0 T^0]"], "options": ["A-III, B-I, C-II, D-IV", "A-IV, B-III, C-II, D-I", "A-III, B-IV, C-II, D-I", "A-I, B-II, C-IV, D-III"], "answer": 2}]
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const quizData = JSON.parse(document.getElementById('quiz-data').textContent);
+            const root = document.getElementById('quiz-root');
+            const letters = ["A", "B", "C", "D"];
+            const romans = ["I", "II", "III", "IV"];
+
+            quizData.forEach(q => {
+                const card = document.createElement('div');
+                card.className = 'glass-card';
+
+                let rows = '';
+                for(let i=0; i<4; i++) {
+                    rows += `<tr>
+                        <td><strong>${letters[i]}.</strong> ${q.list_i[i]}</td>
+                        <td><strong>${romans[i]}.</strong> $${q.list_ii[i]}$</td>
+                    </tr>`;
+                }
+
+                card.innerHTML = `
+                    <h3 style="margin-top:0">Question ${q.id}: Match List I with list II</h3>
+                    <table>
+                        <thead><tr><th>List-I</th><th>List-II</th></tr></thead>
+                        <tbody>${rows}</tbody>
+                    </table>
+                    <div class="options-container" id="opts-${q.id}">
+                        ${q.options.map((opt, i) => `
+                            <button class="opt-btn" onclick="checkAnswer(this, ${q.id}, ${i+1}, ${q.answer})">
+                                (${i+1}) ${opt}
+                            </button>
+                        `).join('')}
+                    </div>
+                    <div id="msg-${q.id}" class="feedback"></div>
+                `;
+                root.appendChild(card);
+            });
+
+            // Manual KaTeX trigger
+            if (window.renderMathInElement) {
+                renderMathInElement(document.body, {
+                    delimiters: [
+                        {left: '$$', right: '$$', display: true},
+                        {left: '$', right: '$', display: false}
+                    ],
+                    throwOnError: false
+                });
+            }
+        });
+
+        function checkAnswer(btn, qId, selected, correct) {
+            const container = document.getElementById('opts-' + qId);
+            const msg = document.getElementById('msg-' + qId);
+            const buttons = container.querySelectorAll('.opt-btn');
+            
+            buttons.forEach(b => b.disabled = true);
+
+            if(selected === correct) {
+                btn.classList.add('correct');
+                msg.innerHTML = "✨ Correct!";
+                msg.style.color = "#10b981";
+            } else {
+                btn.classList.add('wrong');
+                buttons[correct-1].classList.add('correct');
+                msg.innerHTML = "❌ Incorrect. Option (" + correct + ") is correct.";
+                msg.style.color = "#ef4444";
+            }
+        }
+    </script>
+</body>
+</html>
